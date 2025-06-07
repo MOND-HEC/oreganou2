@@ -1,0 +1,461 @@
+---
+title: "Bioestimulación y Protección Natural de Semillas de Tarwi (*Lupinus mutabilis*) con Extracto de Orégano"
+author: "Lesly Alvarado Muñoz, Hector Stalin Arista Fernandez, Marcos Andy Coronel Balcazar, Briyan Eliseo Grandez Castro"
+format:
+  html:
+   toc: true
+   toc-location: left
+   embed-resources: true
+   number-sections: true
+   output-file: index
+   theme: darkly
+   css: estilo.css
+editor_options: 
+  chunk_output_type: console
+---
+
+# INTRODUCCIÓN
+
+Las semillas de tarwi (Lupinus mutabilis) tienen una cubierta dura que dificulta su germinación y las hace susceptibles a agentes patógenos. Para mejorar este proceso, se emplean técnicas como la escarificación, pero la protección natural mediante bioestimulantes también es crucial. El orégano (Origanum vulgare) es una planta conocida por sus compuestos polifenólicos, como la acacetina, apigenina y ácido rosmarínico, que poseen propiedades antioxidantes y antimicrobianas. Estas características sugieren que el orégano puede ser un recurso efectivo para mejorar la germinación de semillas al fortalecer las defensas naturales de las plántulas (Žitek et al., 2021; Oğuz et al., 2023). El estudio propuesto investiga la factibilidad de utilizar extractos de orégano para tratar semillas de tarwi, evaluando sus efectos sobre la germinación. Aunque se sabe que a bajas concentraciones el orégano actúa como bioestimulante, se debe tener en cuenta que en concentraciones elevadas puede generar efectos alelopáticos que inhiben la germinación. Este trabajo busca determinar el equilibrio adecuado de concentración de orégano que maximice los beneficios sin causar efectos negativos, y explorar cómo estos compuestos pueden inducir mecanismos de defensa en las semillas escarificadas. 
+
+# OBJETIVOS
+
+## Objetivo general
+
+Evaluar el efecto del extracto de orégano (Origanum vulgare) en la germinación de semillas de tarwi (Lupinus mutabilis), determinando su capacidad para mejorar la germinación y promover las defensas naturales de las semillas escarificadas mediante sus propiedades antioxidantes y antimicrobianas, en función de su concentración.
+
+## Objetivos específicos
+
+-Revisar las propiedades antimicrobianas, antioxidantes y fenólicas del orégano y su posible influencia en la germinación de semillas de tarwi.
+
+-Analizar cómo los compuestos del orégano pueden estimular las defensas naturales de las semillas escarificadas.
+
+-Evaluar el efecto de diferentes concentraciones de extracto de orégano en la germinación de las semillas, identificando el rango óptimo que favorezca la germinación sin inducir efectos fitotóxicos.
+
+# MATERIALES Y MÉTODOS
+
+## Materiales:
+
+-Semillas de Tarwi (Lupinus mutabilis) 
+-Extracto de orégano (20 g de hojas maceradas en 500 ml de agua) 
+-Agua destilada -Recipientes para siembra 
+-Termómetro para controlar la temperatura (aproximadamente 25 °C) 
+-Luz para mantener las condiciones de luz (16 h luz / 8 h oscuridad)
+
+## Metodología
+
+**Obtención de semillas**
+
+Se obtuvo 1 kg de semillas de chocho (*Lupinus sp*) provenientes de la ciudad de Chachapoyas, amazonas.
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+#| fig-cap: "Mi imagen desde Google Drive"
+library(cowplot)
+
+ggdraw() +
+  draw_image(
+    "https://drive.google.com/uc?export=view&id=1g9bgV70cnVgPNDJczQaMHMMNItSZ6Uv-",
+    x = 0, y = 0, width = 1, height = 1
+  )
+```
+
+**Elaboración de las etiquetas** En el experimento, las etiquetas fueron utilizadas para identificar los diferentes grupos experimentales o tratamientos. Estas etiquetas permiten distinguir entre las semillas de Tarwi tratadas con extracto de orégano y las semillas de control tratadas solo con agua destilada. Para generar estas etiquetas en un análisis de datos usando R, se pueden asignar de manera sistemática a cada grupo de semillas, ya sea para identificar los diferentes tratamientos o las condiciones experimentales en las que se encuentra cada muestra. Las etiquetas son cruciales para realizar comparaciones, análisis de germinación, y otros procesos estadísticos.
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+#| fig-cap: "Imagen actualizada desde Google Drive"
+library(cowplot)
+
+ggdraw() +
+  draw_image(
+    "https://drive.google.com/uc?export=view&id=1IBON_061lq88mkOVfdpGxCSduz5YyLzR",
+    x = 0, y = 0, width = 1, height = 1
+  )
+
+```
+
+**Selección y escarificación.**
+
+La escariificación de las semillas de Tarwi (Lupinus mutabilis) se realizó exclusivamente utilizando lija. Este proceso consistió en lijar manualmente las semillas para raspar su cubierta dura, lo que permitió romper su impermeabilidad y facilitar la absorción de agua. Este tratamiento físico mejora la germinación al permitir que el agua penetre más fácilmente en el interior de la semilla, lo que favorece el inicio del proceso germinativo. Además, las semillas fueron cuidadosamente seleccionadas para garantizar que solo se usaran aquellas en buenas condiciones, eliminando las que presentaban daños o características anómalas.
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+#| fig-cap: "Imagen actualizada desde Google Drive"
+
+library(cowplot)
+
+ggdraw() +
+  draw_image(
+    "https://drive.google.com/uc?export=view&id=1SEUQAvpJ4r6cMHYLrw6PtsYh5ZSiAvlf",
+    x = 0, y = 0, width = 1, height = 1
+  )
+```
+
+**Preparación de soluciones.**
+
+La preparación de soluciones en el experimento se realizó para tratar las semillas de Tarwi (Lupinus mutabilis) con extracto de orégano. Para ello, se utilizó un proceso de maceración en el que 20 gramos de hojas de orégano fueron mezclados con 500 ml de agua, y esta mezcla se dejó reposar durante 12 horas. Posteriormente, el extracto resultante se utilizó para remojar las semillas de Tarwi durante 6 horas, formando parte del tratamiento experimental. Este extracto de orégano, rico en compuestos fenólicos, fue utilizado para evaluar sus efectos bioestimulantes y antimicrobianos en las semillas, mientras que el grupo de control fue tratado con agua destilada.
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+#| fig-cap: "Collage de 5 imágenes desde Google Drive"
+#| 
+library(cowplot)
+
+urls <- c(
+  "https://drive.google.com/uc?export=view&id=1bwl-r2P_3TlKKbN-hJQE817ojSsyMevb"
+)
+
+ggdraw() +
+  draw_image(urls[1], x = 0, y = 0, width = 1, height = 1)
+```
+
+**Remojo de la semillas por 40 minutos.**
+
+El remojo de las semillas por 40 minutos se realizó con el objetivo de mejorar la germinación de las semillas de Tarwi (Lupinus mutabilis) y facilitar la absorción de agua, lo que es fundamental para activar los procesos metabólicos necesarios para la germinación. Este paso se implementó después de la escarificación de las semillas, utilizando agua destilada o el extracto de orégano según el grupo experimental. El remojo permite que las semillas suavicen su cubierta y favorece la penetración de los compuestos bioactivos del orégano en el interior de las semillas, potenciando su capacidad para germinar. Esta práctica también contribuye a reducir el estrés fisiológico de las semillas y asegura una germinación más uniforme.
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+#| fig-cap: "Imagen actualizada desde Google Drive"
+
+library(cowplot)
+
+ggdraw() +
+  draw_image(
+    "https://drive.google.com/uc?export=view&id=1DEPUsuv0XHz80lM3-NAV8pM_I234McCI",
+    x = 0, y = 0, width = 1, height = 1
+  )
+
+```
+
+**Preparación de recipientes.**
+
+En el experimento, se colocó papel toalla dentro de los taper (recipientes) con el propósito de retener la humedad necesaria para favorecer la germinación de las semillas de Tarwi (Lupinus mutabilis). El papel toalla ayudó a mantener un ambiente húmedo y estable, crucial para el proceso de germinación. Posteriormente, los recipientes fueron ubicados a temperatura ambiente, alrededor de 25°C, lo que proporcionó las condiciones ideales para que las semillas comenzaran a germinar. Esta estrategia permitió controlar la humedad y la temperatura, dos factores esenciales para asegurar una germinación exitosa y homogénea de las semillas.
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+#| fig-cap: "Imagen actualizada desde Google Drive"
+
+library(cowplot)
+
+ggdraw() +
+  draw_image(
+    "https://drive.google.com/uc?export=view&id=1k06OIk82hQJX7NN5AO3MiUWwn-BuoKrX",
+    x = 0, y = 0, width = 1, height = 1
+  )
+
+```
+
+**Germinación.**
+
+Se colocaron 25 semillas en cada taper con el objetivo de contabilizar la germinación de manera precisa. Esta cantidad de semillas fue sembrada de forma organizada en los recipientes para facilitar el seguimiento y la observación diaria del proceso germinativo. El diseño experimental permitió monitorear el porcentaje de germinación y el tiempo hasta la germinación de las semillas, asegurando que se pudieran registrar datos de manera sistemática y consistente. Esta metodología también permitió evaluar el vigor de las semillas y la salud de las plántulas, así como la efectividad de los tratamientos aplicados, ya sea el remojo en extracto de orégano o agua destilada.
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+#| fig-cap: "Imagen actualizada desde Google Drive"
+
+library(cowplot)
+
+ggdraw() +
+  draw_image(
+    "https://drive.google.com/uc?export=view&id=1glE3wlTL5xbkD04SgAbVUIJeTk69ZUha",
+    x = 0, y = 0, width = 1, height = 1
+  )
+
+```
+
+**Variables a evaluar**
+
+**Variable independiente:**
+
+La concentración de extracto de orégano. Se manipula al remojar las semillas de Tarwi en diferentes concentraciones de extracto para observar su efecto en la germinación y el desarrollo de las plántulas.
+
+**Variable dependiente:**
+
+-Concentración de extracto de orégano: Las semillas de Tarwi se remojan en diferentes concentraciones de extracto de orégano (concentración alta y baja) para evaluar su impacto en la germinación.
+
+-Tiempo de remojo de las semillas: Aunque no se menciona explícitamente en todos los tratamientos, se controla el tiempo de remojo de las semillas (6 horas) para evaluar su efecto combinado con el extracto.
+
+**Diseño del experimento**
+
+**Tratamientos**
+
+-T1: Remojo de semillas de Tarwi en extracto de orégano a baja concentración (20 g en 500 ml de agua).
+
+-T2: Remojo de semillas de Tarwi en agua destilada (sin extracto de orégano).
+
+**Repeticiones**
+
+```         
+4 repeticiones por tratamiento.
+```
+
+**Número de semillas por repetición**
+
+```         
+25 semillas por repetición.
+```
+
+**Diseño estadístico**
+
+```         
+    Diseño de Bloques Completos al Azar (DBCA).
+    
+```
+
+**Evaluación de las semillas germinadas**
+
+La evaluación se realizó de forma diaria, comenzando desde el día 0 hasta el día 6, registrando de manera continua la aparición de signos de germinación y cualquier cambio significativo en el desarrollo de las semillas. Durante este periodo, se mantuvo un control estricto del nivel de humedad y se aseguraron condiciones ambientales constantes. El objetivo fue determinar qué tratamiento de escarificación permitía a las semillas germinar en el menor tiempo posible.
+
+# RESULTADOS
+
+En el diseño del experimento, el agua control se utilizó en el grupo control, en el que las semillas de Tarwi se remojaron en agua destilada sin ningún tratamiento adicional. Este grupo sirve como punto de comparación para observar el efecto del extracto de orégano.
+
+El agua con orégano se utilizó en el tratamiento donde las semillas se remojaron en extracto de orégano a baja concentración (20 g en 500 ml de agua). Este tratamiento se empleó para evaluar el impacto del extracto de orégano en la germinación de las semillas.
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+
+source("https://inkaverse.com/setup.r")
+library(tidyverse)
+library(GerminaR)
+library(dplyr)
+library(cowplot)
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+
+# Importar datos
+
+# Obtener el ID de la hoja de cálculo
+gs <- "https://docs.google.com/spreadsheets/d/1xeFzNLddlBprVvlEciZMFithAvkowU0b05XusPByU24/edit?gid=0#gid=0" %>% 
+  as_sheets_id()
+
+# Listar las hojas disponibles en el archivo
+sheets <- gs %>% sheet_names()
+print(sheets)  # Asegúrate de que "germinacion" esté en la lista
+
+# Leer los datos si la hoja "germinacion" existe
+fb <- gs %>% 
+  range_read("evaluacion") %>%  # Cambia esto si el nombre de la hoja es diferente
+  mutate(across(where(is.character), ~as.factor(.))) %>%
+  dplyr::select(-d4) %>%  # Eliminar la columna 'd4' si existe
+  as.data.frame()
+
+# Mostrar la estructura de los datos
+str(fb)
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+
+ger_summary <- function(SeedN, evalNames, data) {
+  # Verificar si las columnas 'evalNames' existen en el dataframe
+  missing_columns <- setdiff(evalNames, colnames(data))
+  if (length(missing_columns) > 0) {
+    stop(paste("Las siguientes columnas no se encuentran en el dataframe:", paste(missing_columns, collapse = ", ")))
+  }
+  
+  # Agrupar los datos por el número de semillas (SeedN) y calcular el promedio de evaluación
+  result <- data %>%
+    group_by(!!sym(SeedN)) %>%
+    summarise(germ_index = rowMeans(across(all_of(evalNames)), na.rm = TRUE))  # Promedio de las columnas 'd0', 'd1', ..., 'd6'
+  
+  return(result)
+}
+
+# Definir las columnas para el cálculo del índice de germinación
+eval_columns <- c("d0", "d1", "d2", "d3", "d5", "d6")
+
+# Calcular el índice de germinación
+gsm <- ger_summary(SeedN = "seeds", evalNames = eval_columns, data = fb)
+
+# Mostrar el resultado con kable
+gsm %>% kable()
+```
+
+## Tiempo medio de germinaión
+
+El gráfico compara el tiempo medio de germinación de las semillas tratadas con "Agua control" y "Agua extracto". Se observa que las semillas tratadas con "Agua extracto" tienen un tiempo medio de germinación superior al de las tratadas con "Agua control", lo que sugiere que el extracto puede prolongar el proceso de germinación. Las barras de error indican la variabilidad de los tiempos dentro de cada tratamiento, mostrando que, aunque la tendencia es clara, existen diferencias en la respuesta de las semillas.
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+
+gsm <- fb %>%
+  mutate(mgt = rowMeans(across(starts_with("d")), na.rm = TRUE))  # Usamos 'across' para seleccionar todas las columnas que empiezan con "d"
+
+# Realizar el análisis de varianza (ANOVA)
+av <- aov(mgt ~ Tratamiento, data = gsm)
+anova(av)
+
+# Comparación de medias utilizando el test SNK
+mc_mgt <- HSD.test(av, "Tratamiento", group = TRUE)
+
+# Mostrar los resultados de la comparación de medias
+mc_mgt$res %>%
+  kable(caption = "Comparación del tiempo medio de germinación")
+results_df <- data.frame(
+  Tratamiento = rownames(mc_mgt$means),
+  means = mc_mgt$means$mgt,
+  std.error = mc_mgt$means$std
+)
+
+# Crear el gráfico
+ggplot(results_df, aes(x = Tratamiento, y = means, fill = Tratamiento)) + 
+  geom_col(position = "dodge") +  # Usar geom_col para representar las medias
+  geom_errorbar(aes(ymin = means - std.error, ymax = means + std.error), width = 0.2) +  # Barras de error
+  labs(title = "Comparación del Tiempo Medio de Germinación",
+       x = "Tratamiento", y = "Tiempo Medio de Germinación") +
+  theme_light()  # Tema ligero para el gráfico
+```
+
+## Germinabilidad
+
+El gráfico compara el Tiempo Medio de Germinación entre dos tratamientos: Agua control y Agua extracto. El tratamiento con Agua extracto (barra turquesa) muestra un tiempo medio de germinación de aproximadamente 2.5 días, mientras que el tratamiento Agua control (barra roja) tiene un tiempo medio de 3 días. Esto indica que las semillas tratadas con agua extracto germinan más rápido. Las barras de error, que representan la variabilidad de los datos, también muestran diferencias claras entre los tratamientos, sugiriendo que el agua extracto acelera significativamente la germinación.
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+av <- aov(mgt ~ Tratamiento, data = gsm)
+
+# Comparación de medias utilizando el test SNK
+mc_mgt <- HSD.test(av, "Tratamiento", group = TRUE)
+
+# Crear un dataframe con los resultados de la comparación
+results_df <- data.frame(
+  Tratamiento = rownames(mc_mgt$means),  # Usamos los nombres de las filas (Tratamiento)
+  means = mc_mgt$means$mgt,              # Medias
+  std.error = mc_mgt$means$std,          # Errores estándar
+  groups = mc_mgt$groups$groups          # Grupos de la comparación
+)
+
+# Mostrar los resultados en una tabla
+results_df %>%
+   kable(caption = "Comparación del tiempo medio de germinación")
+
+# Crear un gráfico de barras de las medias con las comparaciones
+ggplot(results_df, aes(x = Tratamiento, y = means, fill = groups)) +
+   geom_bar(stat = "identity", position = "dodge") +  # Barplot para las medias
+   geom_errorbar(aes(ymin = means - std.error, ymax = means + std.error), width = 0.2) +  # Líneas de error
+   labs(title = "Comparación del Tiempo Medio de Germinación",
+        x = "Tratamiento", y = "Tiempo Medio de Germinación") +  # Títulos de los ejes
+   theme_minimal()  # Estilo mínimo para el gráfico
+```
+
+## Germinación en el tiempo
+
+La gráfica muestra el porcentaje de germinación de dos tratamientos a lo largo de los días de observación (del día 0 al día 6). Los dos tratamientos son Agua control (representado por la línea verde) y Agua extracto (representado por la línea roja). A continuación se presenta una interpretación numérica:
+
+En el día 0, ambos tratamientos comienzan con un porcentaje de germinación bajo (alrededor del 10%).
+
+Para el día 1, el tratamiento de Agua extracto muestra un incremento notable en la germinación, alcanzando aproximadamente el 20%, mientras que Agua control muestra un aumento más moderado, alcanzando cerca del 15%.
+
+En el día 2, el tratamiento con Agua extracto continúa mostrando una mayor tasa de germinación, llegando al 30%, mientras que el control alcanza alrededor del 20%.
+
+A medida que avanza el tiempo, el Agua extracto mantiene una tasa de germinación superior, alcanzando aproximadamente el 50% en el día 4 y el 80% en el día 6. Por su parte, el Agua control muestra un crecimiento más gradual, alcanzando cerca del 40% en el día 6.
+
+El Agua extracto muestra una tasa de germinación constante y más rápida que el Agua control en todos los días observados.
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+
+git <- ger_intime(Factor = "Tratamiento"
+                  , SeedN = "seeds"
+                  , evalName = "d"
+                  , method = "percentage"
+                  , data = fb
+                  )
+
+# data result
+git %>% 
+   kable(caption = "Cumulative germination by treatment factor")
+plot <- git %>% 
+   fplot(data = .
+        , type = "line"
+        , x = "evaluation"
+        , y = "mean"
+        , group = "Tratamiento"
+        , ylimits = c(0, 110, 10)
+        , ylab = "Germination ('%')"
+        , xlab = "Day"
+        , glab = "Dias"
+        , color = T
+        , error = "ste"
+        )
+plot
+```
+
+# DISCUSIÓN
+
+Los resultados demuestran que el tratamiento con extracto de orégano redujo el tiempo de germinación significativamente de las semillas de tarwi en comparación con el control, observándose una germinación más temprana y acelerada. Este efecto bioestimulante puede atribuirse a la acción sinérgica de los compuestos fenólicos presentes en el orégano, particularmente ácido rosmarínico, apigenina y acacetina. Estos metabolitos secundarios actúan como potentes agentes antioxidantes que mitigan el estrés oxidativo durante la imbibición de las semillas, protegiendo las estructuras celulares y facilitando la activación metabólica inicial respaldado por Žitek et al., (2021). Esto también tiene que ver con sus propiedades antimicrobianas de estos compuestos (Oğuz et al., 2023) que van creando un microambiente protector ded reduce la incidencia de patógenos en semillas escarificadas, lo cual permite una mejor eficiencia energética en los procesos que conlleva la germinación. Los compuestos fenólicos son metabolitos secundarios de plantas caracterizados por poseer uno o más anillos aromáticos unidos a grupos hidroxilo (-OH). Son producidos por las plantas como mecanismo de defensa contra estrés biótico (patógenos, herbívoros) y abiótico. En el contexto de su investigación con orégano, son los responsables clave del efecto bioestimulante observado en semillas de tarwi. La concentración utilizada como es 20g/50ml de agua estéril parece estimular con facilidad la síntesis de enzimas hidrolíticas con α-amilasas y proteasas, acelerando la movilización de reservas nutritivas del endospermo, mientras que simultáneamente modula la expresión de genes relacionados con la expansión celular en el embrión. Estos hallazgos coinciden con estudios en Lupinus albus donde extractos fenólicos redujeron el tiempo de germinación en 40% al promover la biosíntesis de giberelinas (El-Mergawi et al., 2019). Por ello es concluyente destacar el efecto bifásico reportado para compuestos fenólicos, en concentraciones superiores a 50g/500ml pueden inducir efectos alelopáticos inhibitorios, como se observó en Lactuca sativa con extractos de Origanum syriacum (Alu'datt et al., 2022), lo que subraya la importancia de la dosificación precisa en estas aplicaciones. El estudio de El-Mergawi et al. (2019) refuerza directamente sus hallazgos al demostrar que extractos fenólicos de plantas medicinales aceleran la germinación en Lupinus albus mediante dos mecanismos críticos. Los resultados demuestran concluyentemente que el extracto acuoso de orégano al 4% (20g/500ml de agua estéril) actúa como potente bioestimulante de la germinación en tarwi, reduciendo el tiempo medio de germinación en 16.7% respecto al control. Este efecto se atribuye principalmente a la sinergia de compuestos fenólicos identificados en el orégano, esto representa el punto óptimo entre bioestimulación y ausencia de fitotoxicidad, validándose como alternativa sostenible a tratamientos convencionales.
+
+# RECOMENDACIONES
+
+Durante la fase inicial del experimento, el protocolo contemplaba un tiempo de remojo de 6 horas antes de transferir las semillas a los recipientes de evaluación de germinación. Sin embargo, se observó que las semillas tratadas con extracto de orégano presentaban una absorción hídrica acelerada y una germinación prematura, lo cual indicaba una respuesta fisiológica inmediata al tratamiento. Esta observación motivó la necesidad de ajustar el protocolo, ya que el remojo prolongado inducía una germinación demasiado avanzada antes del registro experimental.
+
+Se procedió a reducir el tiempo de remojo a 2 horas con el objetivo de evitar una germinación anticipada fuera de los parámetros de control. No obstante, incluso en este intervalo, las semillas mostraron una germinación abrupta y no uniforme, lo que comprometía la capacidad de comparar adecuadamente los tratamientos con el grupo control (agua destilada). Esta respuesta sugiere una alta sensibilidad de las semillas al extracto de orégano, lo que puede estar relacionado con la presencia de compuestos bioactivos que actúan como promotores de la germinación.
+
+Finalmente, se estableció un tiempo de remojo óptimo de 40 minutos, en el cual las semillas lograron una imbibición efectiva sin alcanzar aún el punto visible de germinación. Esta modificación permitió una evaluación precisa y estandarizada del inicio de la germinación bajo distintas condiciones, manteniendo la comparabilidad con el tratamiento control. Así, se garantizó que el efecto observado sea atribuible al tratamiento y no a una variación temporal en el protocolo.
+
+# REFERENCIAS BIBLIOGRÁFICAS
+
+Žitek, T., Makuc, D., Plavec, J., & Abramovič, H. (2021). Antioxidative properties of phenolic compounds in Origanum vulgare L. extract. Food Chemistry, 344, 128652. DOI: 10.1016/j.foodchem.2020.128652 Oğuz, E. S., Karakaya, S., & Yalçın, H. (2023). Chemical composition and antimicrobial activity of essential oils from Origanum vulgare against plant pathogens. Journal of Plant Diseases and Protection, 130(1), 205-215. DOI: 10.1007/s41348-022-00678-5 El-Mergawi, R. A., & Al-Huqail, A. A. (2019). Influence of phenolic extracts from some medicinal plants on germination and biochemical processes of Lupinus albus L. Journal of Plant Interactions, 14(1), 482-490. DOI: 10.1080/17429145.2019.1662099
+
+# ANEXOS
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+#| fig-cap: "Imagen actualizada desde Google Drive"
+
+library(cowplot)
+
+# Lista de URLs de las imágenes
+download.file("https://drive.google.com/uc?id=1ifTXYiK9I34viXbrSAaBleMmxI5TIuL8", destfile = "imagen.jpg", mode = "wb")
+
+# Ahora, carga la imagen local
+ggdraw() +
+  draw_image("imagen.jpg", x = 0, y = 0, width = 1, height = 1)  
+
+```
