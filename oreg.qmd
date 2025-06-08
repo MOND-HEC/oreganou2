@@ -1,6 +1,6 @@
 ---
 title: "Bioestimulación y Protección Natural de Semillas de Tarwi (*Lupinus mutabilis*) con Extracto de Orégano"
-author: "Lesly Alvarado Muñoz, Hector Stalin Arista Fernandez, Marcos Andy Coronel Balcazar, Briyan Eliseo Grandez Castro"
+author: "Lesly Alvarado Muñoz, Hector Stalin Arista Fernandez, Marcos Andy Coronel Balcazar, Briyan Eliseo Grandez Castro,José Luis Huanambal Galvez, Alex Rolando Quispe Aguilar"
 format:
   html:
    toc: true
@@ -26,11 +26,9 @@ Evaluar el efecto del extracto de orégano (Origanum vulgare) en la germinación
 
 ## Objetivos específicos
 
--Revisar las propiedades antimicrobianas, antioxidantes y fenólicas del orégano y su posible influencia en la germinación de semillas de tarwi.
+-Revisar las propiedades antimicrobianas, antioxidantes y fenólicas del orégano y su posible influencia en la germinación de semillas de Tarwi.
 
--Analizar cómo los compuestos del orégano pueden estimular las defensas naturales de las semillas escarificadas.
-
--Evaluar el efecto de diferentes concentraciones de extracto de orégano en la germinación de las semillas, identificando el rango óptimo que favorezca la germinación sin inducir efectos fitotóxicos.
+-Evaluar estudios sobre cómo el extracto de orégano promueve o inhibe la germinación según su concentración.
 
 # MATERIALES Y MÉTODOS
 
